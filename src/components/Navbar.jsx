@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+
+  ${mobile({
+    height: "50px",
+  })}
 `;
 
 const Wrapper = styled.div`
@@ -11,17 +16,30 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${mobile({
+    padding: "10px 0px",
+  })}
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+
+  ${mobile({
+    flex: "1",
+    marginLeft: "20px",
+  })}
 `;
 
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const SearchContainer = styled.div`
@@ -31,11 +49,20 @@ const SearchContainer = styled.div`
   margin-left: 25px;
   padding: 5px;
   border-radius: 10px;
+
+  ${mobile({
+    marginLeft: "5px",
+  })}
 `;
 
 const Input = styled.input`
   border: none;
   outline: none;
+
+  ${mobile({
+    width: "50px",
+    height: "10px",
+  })}
 `;
 
 const Center = styled.div`
@@ -45,6 +72,11 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+
+  ${mobile({
+    fontSize: "30px",
+    marginLeft: "5px",
+  })}
 `;
 
 const Right = styled.div`
@@ -52,12 +84,23 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  ${mobile({
+    flex: 1.5,
+    justifyContent: "flex-start",
+    marginLeft: "0px",
+  })}
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+
+  ${mobile({
+    fontSize: "12px",
+    marginLeft: "5px",
+  })}
 `;
 
 const Navbar = () => {
@@ -67,7 +110,7 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search..." />
             <Search style={{ color: "grey", fontsize: 4 }} />
           </SearchContainer>
         </Left>

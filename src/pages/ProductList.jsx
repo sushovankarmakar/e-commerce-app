@@ -4,12 +4,17 @@ import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Title = styled.h1`
   font-size: 70px;
   margin: 20px;
+
+  ${mobile({
+    textAlign: "center",
+  })}
 `;
 
 const FilterContainer = styled.div`
@@ -19,18 +24,32 @@ const FilterContainer = styled.div`
 
 const Filter = styled.div`
   margin: 20px;
+
+  ${mobile({
+    display: "flex",
+    flexDirection: "column",
+    margin: "0px 20px",
+  })}
 `;
 
 const FilterText = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 10px;
+
+  ${mobile({
+    marginBottom: "5px",
+  })}
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 10px;
   font-size: 15px;
+
+  ${mobile({
+    marginBottom: "5px",
+  })}
 `;
 
 const Option = styled.option``;

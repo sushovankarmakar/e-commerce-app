@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -20,6 +21,10 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   border-radius: 10px;
+
+  ${mobile({
+    width: "75%",
+  })}
 `;
 
 const Title = styled.h1`
@@ -72,7 +77,7 @@ const Register = () => {
           <Agreement>
             By creating a new account, I consent to the process of my personal
             data in accordance with the
-            <b>PRIVACY POLICY</b>
+            <b>&nbsp; PRIVACY POLICY</b>
           </Agreement>
           <Button>REGISTER</Button>
         </Form>
